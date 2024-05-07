@@ -41,7 +41,7 @@ def add_scores_to_team_dictionary(team_dict, name, score):
     score, or creates an entry if that team is not alread
     in the disctionary.
     """
-    if name in team_scores.keys():
+    if name in team_dict.keys():
         # if the team is in the dict already, increment
         team_dict[name] += score
     else:
@@ -59,3 +59,16 @@ def add_scores_to_team_dictionary(team_dict, name, score):
 # print(team_scores)
 # add_scores_to_team_dictionary(team_scores, "team 2", 13)
 # print(team_scores)
+
+###################################
+# run a bunch of updates
+
+team_score_dictionary = {}
+
+add_scores_to_team_dictionary(team_score_dictionary, "Team Alpha", 12)
+add_scores_to_team_dictionary(team_score_dictionary, "Team Gamma", 18)
+add_scores_to_team_dictionary(team_score_dictionary, "Team Strike Force", 23)
+add_scores_to_team_dictionary(team_score_dictionary, "Team Discovery Channel", 84)
+add_scores_to_team_dictionary(team_score_dictionary, "Team Gamma", 44)
+
+print(team_score_dictionary)
